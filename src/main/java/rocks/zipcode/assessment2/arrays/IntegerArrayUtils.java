@@ -45,7 +45,7 @@ public class IntegerArrayUtils {
      * @return element located at `indexToFetch`
      */
     public static Integer get(Integer[] integerArray, Integer indexToFetch) {
-        return null;
+        return integerArray[indexToFetch];
 
 }
 
@@ -62,7 +62,14 @@ public class IntegerArrayUtils {
      * @return identical array with even-values incremented by 1
      */
     public static Integer[] incrementEven(Integer[] integerArray) {
-        return null;
+        for (int i = integerArray.length +1 ; i >= 0; i++) {
+            if (++integerArray[i] < 10)
+                return integerArray;
+            integerArray[i] = 0;
+        }
+        integerArray = new Integer[integerArray.length + 1];
+        integerArray[0] = 1;
+        return integerArray;
     }
 
     /**

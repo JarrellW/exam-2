@@ -1,11 +1,13 @@
 package rocks.zipcode.assessment2.collections;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Use a map to keep track of inventory in a store
  */
 public class Inventory {
+//    ArrayList<String> list;
     /**
      * @param strings list of strings to add / remove / fetch from
      */

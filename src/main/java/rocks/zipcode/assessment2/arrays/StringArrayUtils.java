@@ -25,6 +25,8 @@ public class StringArrayUtils {
      * @return an array all elements between after `startingIndex`
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
-        return Arrays.copyOfRange(arrayToBeSpliced, startingIndex, );
+        return null;
+
     }
+
 }
