@@ -7,7 +7,8 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        String answer = string1.concat(string2);
+        return answer;
     }
 
     /**
@@ -15,7 +16,17 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        if (string1 == null) {
+            return string1;
+        }
+
+        String answer = "";
+
+        for (int i = string1.length() - 1; i >= 0; i--) {
+            answer = answer + string1.charAt(i);
+        }
+
+        return answer;
     }
 
     /**
@@ -24,8 +35,14 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+
+        String answer = string1.concat(string2);
+
+        String reverse = new StringBuffer(answer).reverse().toString();
+        return reverse;
     }
+
+
 
     /**
      * @param string - the string to be manipulated
@@ -33,7 +50,12 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        StringBuilder answer = new StringBuilder(string);
+
+        while(answer.toString().indexOf(charactersToRemove) != -1) {
+            answer = answer.deleteCharAt(answer.toString().indexOf(charactersToRemove));
+        }
+        return answer.toString();
     }
 
     /**
@@ -42,6 +64,13 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        StringBuilder answer = new StringBuilder(string);
+
+        while(answer.toString().indexOf(charactersToRemove) != -1) {
+            answer = answer.deleteCharAt(answer.toString().indexOf(charactersToRemove));
+        }
+        String reverse = new StringBuilder(answer).reverse().toString();
+
+        return reverse;
     }
 }
