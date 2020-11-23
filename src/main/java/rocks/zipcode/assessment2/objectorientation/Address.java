@@ -11,6 +11,7 @@ public class Address {
     String city;
     String state;
     String zipcode;
+
     public Address() {
         addressLine1 = "";
         addressLine2 = "";
